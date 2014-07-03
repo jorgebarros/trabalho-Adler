@@ -1,0 +1,33 @@
+<?php
+$db = mysqli_connect("localhost","root","", "db_Adler");
+
+$record_NomeExperimento = $_POST['InputNomeExperimento'];
+$record_ProcedimentoMontagem = $_POST['InputProcedimentoMontagem'];
+$record_NomePeca = $_POST['InputNomePeca'];
+$record_MateriaExperimento = $_POST['InputMteriaExperimento'];
+$record_Disciplina = $_POST['InputDisciplina'];
+$record_Roteiro = $_POST['InputRoteiro'];
+$record_FolhaDados = $_POST['InputFolhaDados'];
+
+if ($_GET['escolha'] == "inserir") {
+    $record = mysqli_query($db,"INSERT INTO experimentos(NomeExperimento, ProcedimentoMontagem, Nomepeca, MateriaExperimento, Disciplina, Roteiro, FolhaDados)
+                                       value ('$record_NomeExperimento','$record_ProcedimentoMontagem','$record_NomePeca', '$record_MateriaExperimento', '$record_Disciplina', '$record_Roteiro',
+                                        '$record_FolhaDados' )");
+
+    header('Location:VisualizarExperimento.php');
+}
+
+if ($_GET['escolha'] == "alterar") {
+    $id = $_GET['id'];
+    $results = mysqli_query($db,"UPDATE experimentos SET NomeExperimento='$record_NomeExperimento',ProcedimentoMontagem='$record_ProcedimentoMontagem',
+                                      NomePeca='$record_NomePeca',MateriaExperimento='$record_MateriaExperimento',Disciplina='$record_Disciplina',Roteiro='$record_Roteiro',FolhaDados='$record_FolhaDados'  WHERE id='$id'");
+    header('Location:VisualizarExperimento.php');
+}
+
+if ($_GET['escolha'] == "remover") {
+    $id = $_GET['id'];
+    $results = mysqli_query($db,"DELETE FROM experimentos WHERE id='$id'");
+    header('Location:VisualizarExperimento.php');
+}
+
+?>
