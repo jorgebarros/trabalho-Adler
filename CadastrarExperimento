@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <style type="text/css">
+        .centro {
+            height:41.42em;
+            left:50%;
+            margin-left:-15em;
+            position:absolute;
+            top:15%;
+            width:30em;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Física</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastrar<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="CadastrarExperimento.php">Experimentos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Visualizar <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="VisualizarExperimento.php">Experimentos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <form class="form-inline" role="form" style="margin-top: 8px">
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-default">Sign in</button>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+    <div class="centro">
+        <form role="form" method="post" action="FunctionsExperimento.php?escolha=inserir">
+            <div class="row col-md-12">
+                <div class="form-group col-md-12">
+                    <label for="InputNomeExperimento">Inserir Experimento</label>
+                    <input type="varchar" class="form-control" id="InputNomeExperimento" name="InputNomeExperimento" >
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-12">
+                    <label for="InputProcedimentoMontagem">Procedimento de montagem</label>
+                    <input type="longtext" class="form-control" id="InputProcedimentoMontagem" name="InputProcedimentoMontagem">
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-12">
+                    <label for="InputNomePeca">Nome da Peça</label>
+                    <input type="varchar" class="form-control" id="InputNomePeca" name="InputNomePeca">
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-12">
+                    <label for="InputMateriaExperimento">Matéria do Experimento</label>
+                    <input type="varchar" class="form-control" id="InputMateriaExperimento" name="InputMateriaExperimento">
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-12">
+                    <label for="InputDisciplina">Disciplina</label>
+                    <input type="varchar" class="form-control" id="InputDisciplina" name="InputDisciplina">
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-12">
+                    <label for="InputRoteiro">Roteiro</label>
+                    <input type="text" class="form-control" id="InputRoteiro" name="InputRoteiro">
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-12">
+                    <label for="InputFolhaDados">Folha de dados</label>
+                    <input type="text" class="form-control" id="InputFolhaDados" name="InputFolhaDados">
+                    <input type="submit" class="btn btn-primary btn-block col-md-10" style="margin-top: 30px;">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
